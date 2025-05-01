@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jane Doe - Software Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <main class="p-6 max-w-6xl mx-auto">
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-2">Jane Doe - Software Developer</h1>
+      <p class="text-lg text-gray-600">Crafting scalable web applications and solving real-world problems.</p>
+    </header>
+
+    <div class="mb-6">
+      <nav class="flex justify-center gap-6">
+        <button onclick="showTab('resume')" class="tab-btn font-semibold">Resume</button>
+        <button onclick="showTab('portfolio')" class="tab-btn font-semibold">Portfolio</button>
+        <button onclick="showTab('skills')" class="tab-btn font-semibold">Skills</button>
+      </nav>
+    </div>
+
+    <section id="resume" class="tab-content">
+      <div class="bg-white shadow-md rounded-xl p-6">
+        <h2 class="text-2xl font-semibold mb-4">Experience</h2>
+        <ul class="space-y-2">
+          <li>
+            <strong>Senior Developer</strong> - XYZ Corp (2020 - Present)
+            <p>Led frontend architecture for B2B applications using React and Node.js.</p>
+          </li>
+          <li>
+            <strong>Full Stack Engineer</strong> - ABC Inc (2017 - 2020)
+            <p>Built RESTful APIs and dynamic UIs with Django and Vue.</p>
+          </li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-6 mb-4">Education</h2>
+        <p>B.S. in Computer Science - Georgia Tech (2013 - 2017)</p>
+      </div>
+    </section>
+
+    <section id="portfolio" class="tab-content hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-white border rounded-xl p-4 shadow-md">
+          <h3 class="text-xl font-semibold">Project A</h3>
+          <p class="text-sm">A real-time chat app using WebSockets and React.</p>
+        </div>
+        <div class="bg-white border rounded-xl p-4 shadow-md">
+          <h3 class="text-xl font-semibold">Project B</h3>
+          <p class="text-sm">E-commerce site with Stripe integration and Next.js.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="tab-content hidden">
+      <div class="bg-white shadow-md rounded-xl p-6">
+        <ul class="grid grid-cols-2 gap-4 text-sm">
+          <li><strong>Languages:</strong> JavaScript, Python, TypeScript</li>
+          <li><strong>Frameworks:</strong> React, Node.js, Django</li>
+          <li><strong>Tools:</strong> Git, Docker, AWS</li>
+          <li><strong>Soft Skills:</strong> Communication, Leadership, Problem Solving</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="text-center mt-12 text-gray-500">
+      <p>&copy; 2025 Jane Doe. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script>
+    function showTab(tabId) {
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.classList.add('hidden'));
+      document.getElementById(tabId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
